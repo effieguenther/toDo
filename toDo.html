@@ -9,17 +9,20 @@
 </head>
 <body>
     <h1>To Do</h1>
-    <fieldset>
         <label for="task">Task</label>
         <input type="text" id="task" name="task">
         <label for="deadline">Deadline</label>
         <input type="date" id="deadline" name="deadline">
-        <input type="submit" value="Add task">
-    </fieldset>
+        <button id="addTask" onclick="addTask()">Add Task</button>
     
     <h2>Active Tasks</h2>
+        <ul id="activeTasks">
+        </ul>
 
     <h2>Completed Tasks</h2>
+        <ul id="completedTasks">
+        </ul>
     
+    <script src="toDo.js"></script>
 </body>
 </html>
