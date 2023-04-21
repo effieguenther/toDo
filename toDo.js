@@ -2,7 +2,7 @@ function addTask() {
     const newTask = document.querySelector('#task').value;
     const newDeadline = document.querySelector('#deadline').value;
     const newLi = document.createElement('li');
-    const completeButton = document.createElement('button');
+    const completeButton = createButton()
     const parentList = document.querySelector('#activeTasks');
     
 
@@ -13,10 +13,19 @@ function addTask() {
     }
 
     newLi.appendChild(task);
+    newLi.appendChild(completeButton);
     parentList.appendChild(newLi);
     
 }
 
+function createButton() {
+    button = document.createElement('button');
+    button.innerText = 'complete';
+    button.addEventListener('click', completeTask());
+    return button;
+}
+
 function completeTask() {
+    console.log('complete task');
     
 }

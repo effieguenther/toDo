@@ -2,3 +2,6 @@ body {
     font-family:'Tahoma', 'sans-serif';
 }
 
+button {
+    margin-left: 10px;
+}
