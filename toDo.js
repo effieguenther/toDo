@@ -8,6 +8,7 @@ function addTask() {
 
     if (newDeadline) {
         task = document.createTextNode(newTask + ' - ' + newDeadline);
+        
     } else {
         task = document.createTextNode(newTask);
     }
@@ -15,17 +16,20 @@ function addTask() {
     newLi.appendChild(task);
     newLi.appendChild(completeButton);
     parentList.appendChild(newLi);
+
+
+    completeButton.addEventListener('click', () => {
+        console.log('complete task');
+        completedTask = newLi.cloneNode(true);
+        const completedList = document.querySelector('#completedTasks');
+        completedList.appendChild(completedTask);
+        task.parentNode.remove();
+    });
     
 }
 
 function createButton() {
     button = document.createElement('button');
     button.innerText = 'complete';
-    button.addEventListener('click', completeTask());
     return button;
-}
-
-function completeTask() {
-    console.log('complete task');
-    
 }
