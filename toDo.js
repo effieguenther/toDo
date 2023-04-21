@@ -23,7 +23,8 @@ function addTask() {
         completedTask = newLi.cloneNode(true);
         const completedList = document.querySelector('#completedTasks');
         completedList.appendChild(completedTask);
-        task.parentNode.remove();
+        completedTask.querySelector('button').remove();
+        newLi.remove();
     });
     
 }
@@ -31,5 +32,6 @@ function addTask() {
 function createButton() {
     button = document.createElement('button');
     button.innerText = 'complete';
+    //button.classList.add('complete-btn');
     return button;
 }
