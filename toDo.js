@@ -32,6 +32,5 @@ function addTask() {
 function createButton() {
     button = document.createElement('button');
     button.innerText = 'complete';
-    //button.classList.add('complete-btn');
     return button;
 }
